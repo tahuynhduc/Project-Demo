@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 1153135944}
   - component: {fileID: 1153135943}
   - component: {fileID: 1153135945}
+  - component: {fileID: 1153135946}
   m_Layer: 0
   m_Name: PlayerBlue_Frame_01_png_processed
   m_TagString: Untagged
@@ -403,6 +404,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ade586ff909f9a49a0cce6f10ea4793, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1153135946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1153135942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb5438f67cd651047bdc2f7acfeb1f7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5161770299067571363, guid: 4580f76c612db2a43a0032da7ce29d5e, type: 3}
+  shootingInterval: 0.1
 --- !u!1 &2139759006
 GameObject:
   m_ObjectHideFlags: 0
