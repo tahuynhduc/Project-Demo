@@ -6,11 +6,19 @@ using UnityEngine.Events;
 public class Health : MonoBehaviour
 {
     public GameObject explosionPrefab;
-    public int defaultHealthPoint;
-    private int healthPoint;
+    public int defaultHealthPoint = 3;
+    public int healthPoint;
     public UnityEvent onDeath;
-    private void Start() => healthPoint = defaultHealthPoint;
-    protected virtual void Die()
+    public System.Action onHealthChanged;
+    private void Awake()
+    {
+    }
+    private void Start()
+    {
+        healthPoint = defaultHealthPoint;
+        onHealthChanged?.Invoke();
+    }
+    public virtual void Die()
     {
         var explosion = Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(explosion, 1);
@@ -22,6 +30,7 @@ public class Health : MonoBehaviour
     {
         if (healthPoint <= 0) return;
         healthPoint -= damage;
+        onHealthChanged?.Invoke();
         if (healthPoint <= 0) Die();
     }
 }

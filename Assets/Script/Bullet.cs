@@ -8,13 +8,13 @@ public class Bullet : MonoBehaviour
     public float flySpeed;
     Rigidbody2D rb;
     public int damage;
-    // Update is called once per frame
     void Update()
     {
         var newPosition = transform.position;
         newPosition.y += Time.deltaTime * flySpeed;
         transform.position = newPosition;
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var enemy = collision.GetComponent<Health>();
