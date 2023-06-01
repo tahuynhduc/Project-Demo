@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2657602718276742103}
   - component: {fileID: 2657602718276742101}
   - component: {fileID: 2657602718276742100}
+  - component: {fileID: 66587576}
   m_Layer: 7
   m_Name: PlayerRed_Frame_01_png_processed
   m_TagString: Enemy
@@ -168,6 +169,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.64, y: 0.64}
   m_EdgeRadius: 0
+--- !u!114 &66587576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2657602718276742091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57aa043226232804abf3d39ac936d8ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyPath: {fileID: 0}
+  flySpeed: 3
 --- !u!1 &5691710779036348587
 GameObject:
   m_ObjectHideFlags: 0
